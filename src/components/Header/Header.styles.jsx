@@ -33,13 +33,12 @@ export const Title = styled.div`
 	font-size: 1.5rem;
 	text-decoration: none;
 	color: #ddd;
-	font-weight: 800;
+	font-weight: 600;
 	display: inline-block;
 	white-space: nowrap;
 	margin: 0 1vw;
 	transition: all 300ms ease-in;
 	position: relative;
-	font-family: 'Poppins';
 	cursor: pointer;
 	:after {
 		position: absolute;
@@ -135,7 +134,6 @@ export const NavItem = styled.span`
 	margin: 0 1vw;
 	transition: all 300ms ease-in;
 	position: relative;
-	font-family: 'Poppins';
 	font-size: 1.1rem;
 	cursor: pointer;
 	:after {

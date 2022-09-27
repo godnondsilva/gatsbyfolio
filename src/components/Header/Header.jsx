@@ -35,11 +35,11 @@ const Header = () => {
 	return (
 		<Navigation isTransparent={isTransparent}>
 			<TitleContainer>
-				<Title>
-					<ScrollTo to='home' smooth={true} duration={1000} offset={-500}>
+				<ScrollTo to='home' smooth={true} duration={1000} offset={-500}>
+					<Title>
 						Godnon Dsilva<BlueDot>.</BlueDot>
-					</ScrollTo>
-				</Title>
+					</Title>
+				</ScrollTo>
 			</TitleContainer>
 			<Toggle
 				navbarOpen={navbarOpen}

@@ -1,5 +1,6 @@
 import * as React from "react"
-import Header from "../components/Header/Header"
+import Header from "../components/header/Header"
+import Landing from "../components/landing/Landing"
 import { GlobalStyles } from "../globalStyles"
 
 const IndexPage = () => {
@@ -8,6 +9,7 @@ const IndexPage = () => {
       <GlobalStyles />
       <main>
         <Header siteTitle={'Portfolio'} />
+        <Landing />
       </main>
     </>
   )
