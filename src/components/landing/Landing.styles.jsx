@@ -182,5 +182,5 @@ export const LinkContainer = styled(Link)`
 `;
 
 export const Blue = styled.span`
-	color: #087ddd;
+	color: #2891e7;
 `;

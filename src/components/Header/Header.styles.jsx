@@ -169,32 +169,10 @@ export const NavItem = styled.span`
 	}
 `;
 
-export const ContactButton = styled.span`
-	color: #ddd;
-	background-color: #1e50bc;
-	padding: 5px 20px 5px 20px;
-	transition: all 300ms ease-in-out;
-	:hover {
-		background-color: #0070c9;
-	}
-	@media only screen and (max-width: 768px) {
-		background-color: #111;
-		color: #ddd;
-		:hover {
-			background-color: #111;
-			color: #0070c9;
-		}
-	}
-`;
-
 export const BlueDot = styled.span`
 	background-image: webkit-linear-gradient(45deg, #1a8fe3 15%, #1e50bc 65%);
 	background-image: linear-gradient(45deg, #1a8fe3 15%, #1e50bc 65%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-`;
-
-export const LinkTo = styled(Link)`
-	text-decoration: none;
 `;

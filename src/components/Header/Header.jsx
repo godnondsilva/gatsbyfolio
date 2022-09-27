@@ -10,8 +10,6 @@ import {
 	Toggle,
 	Navbox,
 	NavItem,
-	ContactButton,
-	LinkTo,
 	Hamburger,
 } from './header.styles';
 
@@ -52,31 +50,19 @@ const Header = () => {
 				<Navbox>
 					{navlinks.map((link, i) => (
 						<>
-							{link.isButton ? (
-								<LinkTo to='blog'>
-									<NavItem
-										isButton={link.isButton}
-										onClick={() => setNavbarOpen(!navbarOpen)}
-									>
-										<ContactButton>{link.title}</ContactButton>
-									</NavItem>
-								</LinkTo>
-							) : (
-								<ScrollTo
-									key={i}
-									to={link.url}
-									duration={1000}
-									smooth={true}
-									offset={link.offsetVal}
-								>
-									<NavItem
-										isButton={link.isButton}
-										onClick={() => setNavbarOpen(!navbarOpen)}
-									>
-										{link.title}
-									</NavItem>
-								</ScrollTo>
-							)}
+							(
+							<ScrollTo
+								key={i}
+								to={link.url}
+								duration={1000}
+								smooth={true}
+								offset={link.offsetVal}
+							>
+								<NavItem onClick={() => setNavbarOpen(!navbarOpen)}>
+									{link.title}
+								</NavItem>
+							</ScrollTo>
+							)
 						</>
 					))}
 				</Navbox>
@@ -85,31 +71,19 @@ const Header = () => {
 				<Navbox open>
 					{navlinks.map((link, i) => (
 						<>
-							{link.isButton ? (
-								<NavItem
-									isButton={link.isButton}
-									onClick={() => setNavbarOpen(!navbarOpen)}
+							(
+							<NavItem onClick={() => setNavbarOpen(!navbarOpen)}>
+								<ScrollTo
+									key={i}
+									to={link.url}
+									duration={1000}
+									smooth={true}
+									offset={link.offsetVal}
 								>
-									<LinkTo to={link.url}>
-										<ContactButton>{link.title}</ContactButton>
-									</LinkTo>
-								</NavItem>
-							) : (
-								<NavItem
-									isButton={link.isButton}
-									onClick={() => setNavbarOpen(!navbarOpen)}
-								>
-									<ScrollTo
-										key={i}
-										to={link.url}
-										duration={1000}
-										smooth={true}
-										offset={link.offsetVal}
-									>
-										{link.title}
-									</ScrollTo>
-								</NavItem>
-							)}
+									{link.title}
+								</ScrollTo>
+							</NavItem>
+							)
 						</>
 					))}
 				</Navbox>
