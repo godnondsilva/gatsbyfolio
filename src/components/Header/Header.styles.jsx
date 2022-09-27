@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 export const Navigation = styled.nav`
 	height: 8vh;

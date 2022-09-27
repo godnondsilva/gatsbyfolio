@@ -19,10 +19,6 @@ const navlinks = [
         url: "contact",
         offsetVal: -100,
     },
-    {
-        title: "Blog",
-        url: "blog",
-    }
 ]
 
 export default navlinks;
