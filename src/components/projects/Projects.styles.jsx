@@ -130,7 +130,7 @@ export const DescriptionButtons = styled.div`
 	}
 `;
 
-export const ImageContainer = styled.img`
+export const ImageContainer = styled.div`
 	display: inline-block;
 	width: 480px;
 	height: 300px;

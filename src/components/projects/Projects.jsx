@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Tilt from 'react-tilt';
 import projects from '../../data/projects';
 
@@ -24,31 +24,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 library.add(faEye, faEyeSlash);
 
 const Projects = () => {
+	const query = useStaticQuery(
+		graphql`
+			query ImageQuery {
+				allImageSharp {
+					edges {
+						node {
+							original {
+								src
+							}
+							gatsbyImageData
+						}
+					}
+				}
+			}
+		`,
+	);
+
 	return (
 		<MainContainer>
 			<ProjectsContainer id='projects' delay={200}>
 				<HeadingContainer>Projects I've Worked On </HeadingContainer>
 				<CardsContainer>
 					{projects.map((project) => {
-						const query = graphql`
-							query allTheImagesQuery {
-								allImageSharp {
-									edges {
-										node {
-											fluid {
-												...GatsbyImageSharpFluid
-												src
-												originalName
-											}
-										}
-									}
-								}
-							}
-						`;
 						return (
 							<CardContainer key={project.id}>
 								<DescriptionContainer>
@@ -94,21 +97,20 @@ const Projects = () => {
 										easing: 'cubic-bezier(.03,.98,.52,.99)',
 									}}
 								>
-									<StaticQuery
-										query={query}
-										render={(data) =>
-											data.allImageSharp.edges
-												.filter(
-													(edge) =>
-														edge.node.fluid.originalName === project.imageUrl,
-												)
-												.map((myImage, i) => (
-													<a key={i} href={project.projectUrl}>
-														<ImageContainer fluid={myImage.node.fluid} />
-													</a>
-												))
+									{query.allImageSharp.edges.map((item, i) => {
+										if (item.node.original.src.includes(project.image)) {
+											return (
+												<ImageContainer key={i}>
+													<GatsbyImage
+														image={item.node.gatsbyImageData}
+														alt={project.title}
+													/>
+												</ImageContainer>
+											);
+										} else {
+											return null;
 										}
-									/>
+									})}
 								</Tilt>
 							</CardContainer>
 						);
