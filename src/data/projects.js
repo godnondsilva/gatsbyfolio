@@ -1,29 +1,25 @@
-const projects = [
+const PROJECTS = [
     {
         id: 1,
-        title: "CRWN Clothing Ltd.",
-        description: "An e-commerce website built with front-end tools like React, Redux and styled-components. The back-end is built with Firebase. It also includes payment integration with Stripe API.",
-        skills: ["React", "Redux", "Firebase", "Stripe", "Styled-components"],
-        delay: 100,
-        inverse: true,
-        image: "crwn-clth",
-        source: "https://github.com/godnondsilva/crwn-clothing-project",
-        projectUrl: "https://crwn-clothing-project.now.sh",
-        readSource: true,
         isFeatured: true,
+        title: 'Project 1',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        skills: ['Skill', 'Skill', 'Skill', 'Skill', 'Skill'],
+        image: 'placeholder',
+        source: 'SOURCE_URL_HERE',
+        projectUrl: 'PROJECT_URL_HERE',
     },
     {
         id: 2,
-        title: "Portfolio",
-        description: "A portfolio website built with Gatsby.js and GraphQL. It also uses styled-components for styling.",
-        skills: ["React", "Gatsby.js", "GraphQL", "Styled-components"],
-        delay: 100,
-        inverse: false,
-        image: "portfolio",
-        source: null,
-        projectUrl: "https://godnondsilva.com",
-        readSource: false,
+        title: 'Project 2',
+        description:
+            'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        skills: ['Skill', 'Skill', 'Skill', 'Skill'],
+        image: 'placeholder',
+        source: '', // Making source url empty adds disabled source eye
+        projectUrl: '', // Making project url removes the preview button
     },
-]
+];
 
-export default projects;
+export default PROJECTS;

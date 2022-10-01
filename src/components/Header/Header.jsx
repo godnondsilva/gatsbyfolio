@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollTo } from 'react-scroll';
-import navlinks from '../../data/navlinks';
+import CONTENT from '../../data/content';
+import NAVIGATION_LINKS from '../../data/navlinks';
 
 import {
 	Navigation,
@@ -35,7 +36,8 @@ const Header = () => {
 			<TitleContainer>
 				<ScrollTo to='home' smooth={true} duration={1000} offset={-500}>
 					<Title>
-						Godnon Dsilva<BlueDot>.</BlueDot>
+						{CONTENT.name}
+						<BlueDot>.</BlueDot>
 					</Title>
 				</ScrollTo>
 			</TitleContainer>
@@ -48,7 +50,7 @@ const Header = () => {
 			{navbarOpen ? (
 				// Mobile mode
 				<Navbox>
-					{navlinks.map((link, i) => (
+					{NAVIGATION_LINKS.map((link, i) => (
 						<>
 							(
 							<ScrollTo
@@ -69,7 +71,7 @@ const Header = () => {
 			) : (
 				// Desktop mode
 				<Navbox open>
-					{navlinks.map((link, i) => (
+					{NAVIGATION_LINKS.map((link, i) => (
 						<>
 							(
 							<NavItem onClick={() => setNavbarOpen(!navbarOpen)}>

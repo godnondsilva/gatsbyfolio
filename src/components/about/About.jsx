@@ -1,54 +1,50 @@
 import React from 'react';
+import CONTENT from '../../data/content';
 
 import {
-	MainContainer,
 	AboutContainer,
-	HeadingContainer,
+	Title,
 	Text,
 	Blue,
-	SkillContainer,
-	ListItem,
+	TechnologyContainer,
+	TechnologyList,
 } from './About.styles';
 
 const About = () => {
 	return (
-		<MainContainer>
-			<AboutContainer id='about'>
-				<HeadingContainer>About Me</HeadingContainer>
-				<Text>
-					Hello! I'm <Blue>Godnon Dsilva</Blue>, a student studying{' '}
-					<Blue>Computer Science & Engineering</Blue> in Mangalore, India.
-				</Text>
-				<Text>
-					I enjoy creating things that live on the internet, whether that be{' '}
-					<Blue>websites, applications, or anything in between</Blue>. My goal
-					is to always build products that provide{' '}
-					<Blue>pixel-perfect, performant experiences.</Blue>
-				</Text>
-				<Text>
-					Here are a few technologies I've been working with recently:
-				</Text>
-				<SkillContainer>
-					<ul>
-						<ListItem>
-							<Blue>JavaScript</Blue>
-						</ListItem>
-						<ListItem>React</ListItem>
-						<ListItem>Node.js</ListItem>
-					</ul>
-					<ul>
-						<ListItem>Gatsby</ListItem>
-						<ListItem>Deno</ListItem>
-						<ListItem>Python</ListItem>
-					</ul>
-					<ul>
-						<ListItem>PostgreSQL</ListItem>
-						<ListItem>MySQL</ListItem>
-						<ListItem>MongoDB</ListItem>
-					</ul>
-				</SkillContainer>
-			</AboutContainer>
-		</MainContainer>
+		<AboutContainer id='about'>
+			<Title>About Me</Title>
+			<Text>
+				Hello! I'm <Blue>{CONTENT.name}</Blue>, a student/employee being
+				studying/working <Blue>Education/Work</Blue> in City, Country.
+			</Text>
+			<Text>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque sint
+				sit soluta. Vero voluptate molestiae maxime architecto, perferendis
+				magnam enim totam quidem corrupti ut nesciunt sunt error tempore eum
+				iure.
+			</Text>
+			<Text>Here are a few technologies I've been working with recently:</Text>
+			<TechnologyContainer>
+				<TechnologyList>
+					<li>
+						<Blue>Technology</Blue>
+					</li>
+					<li>Technology</li>
+					<li>Technology</li>
+				</TechnologyList>
+				<TechnologyList>
+					<li>Technology</li>
+					<li>Technology</li>
+					<li>Technology</li>
+				</TechnologyList>
+				<TechnologyList>
+					<li>Technology</li>
+					<li>Technology</li>
+					<li>Technology</li>
+				</TechnologyList>
+			</TechnologyContainer>
+		</AboutContainer>
 	);
 };
 

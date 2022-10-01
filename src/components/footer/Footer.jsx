@@ -5,7 +5,8 @@ import { FooterContainer, Text } from './Footer.styles';
 const Footer = () => {
 	return (
 		<FooterContainer>
-			<Text>Designed & Developed by Godnon Dsilva</Text>
+			<Text>Built & Designed by Godnon Dsilva.</Text>
+			<Text>&copy; 2022. All rights and reserved.</Text>
 		</FooterContainer>
 	);
 };

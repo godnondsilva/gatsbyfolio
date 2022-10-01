@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Navigation = styled.nav`
 	height: 8vh;
 	display: flex;
-	background-color: #111;
+	background-color: #000;
 	box-shadow: ${({ isTransparent }) =>
-		isTransparent ? '0px 0px' : '1px 1px 20px #000'};
+		isTransparent ? '0px 0px' : '1px 1px 10px #444'};
 	position: relative;
 	justify-content: space-between;
 	margin: 0 auto;
