@@ -1,7 +1,6 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
-import Tilt from 'react-tilt';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {
@@ -70,35 +69,20 @@ const ProjectCard = ({ project }) => {
 					)}
 				</ButtonContainer>
 			</Card>
-			<Tilt
-				className='Tilt'
-				options={{
-					reverse: false,
-					max: 8,
-					perspective: 1000,
-					scale: 1,
-					speed: 300,
-					transition: true,
-					axis: null,
-					reset: true,
-					easing: 'cubic-bezier(.03,.98,.52,.99)',
-				}}
-			>
-				{query.allImageSharp.edges.map((item, i) => {
-					if (item.node.original.src.includes(project.image)) {
-						return (
-							<ImageContainer key={i}>
-								<GatsbyImage
-									image={item.node.gatsbyImageData}
-									alt={project.title}
-								/>
-							</ImageContainer>
-						);
-					} else {
-						return null;
-					}
-				})}
-			</Tilt>
+			{query.allImageSharp.edges.map((item, i) => {
+				if (item.node.original.src.includes(project.image)) {
+					return (
+						<ImageContainer key={i}>
+							<GatsbyImage
+								image={item.node.gatsbyImageData}
+								alt={project.title}
+							/>
+						</ImageContainer>
+					);
+				} else {
+					return null;
+				}
+			})}
 		</CardContainer>
 	);
 };
