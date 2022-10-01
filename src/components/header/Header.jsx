@@ -12,7 +12,7 @@ import {
 	Navbox,
 	NavItem,
 	Hamburger,
-} from './header.styles';
+} from './Header.styles';
 
 const Header = () => {
 	const [navbarOpen, setNavbarOpen] = useState(false);
