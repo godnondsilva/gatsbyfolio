@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProjectsContainer = styled.div`
-	margin: 5rem 0;
+	padding: 100px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;

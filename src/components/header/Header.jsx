@@ -34,7 +34,7 @@ const Header = () => {
 	return (
 		<Navigation isTransparent={isTransparent}>
 			<TitleContainer>
-				<ScrollTo to='home' smooth={true} duration={1000} offset={-500}>
+				<ScrollTo to='home' smooth={true} duration={1000}>
 					<Title>
 						{CONTENT.name}
 						<BlueDot>.</BlueDot>
@@ -53,13 +53,7 @@ const Header = () => {
 					{NAVIGATION_LINKS.map((link, i) => (
 						<>
 							(
-							<ScrollTo
-								key={i}
-								to={link.url}
-								duration={1000}
-								smooth={true}
-								offset={link.offsetVal}
-							>
+							<ScrollTo key={i} to={link.url} duration={1000} smooth={true}>
 								<NavItem onClick={() => setNavbarOpen(!navbarOpen)}>
 									{link.title}
 								</NavItem>
@@ -75,13 +69,7 @@ const Header = () => {
 						<>
 							(
 							<NavItem onClick={() => setNavbarOpen(!navbarOpen)}>
-								<ScrollTo
-									key={i}
-									to={link.url}
-									duration={1000}
-									smooth={true}
-									offset={link.offsetVal}
-								>
+								<ScrollTo key={i} to={link.url} duration={1000} smooth={true}>
 									{link.title}
 								</ScrollTo>
 							</NavItem>

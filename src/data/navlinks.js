@@ -1,24 +1,20 @@
 const NAVIGATION_LINKS = [
-    {
-        title: "Home",
-        url: "home",
-        offsetVal: -400,
-    },
-    {
-        title: "About",
-        url: "about",
-        offsetVal: -80,
-    },
-    {
-        title: "Projects",
-        url: "projects",
-        offsetVal: -60,
-    },
-    {
-        title: "Contact",
-        url: "contact",
-        offsetVal: -100,
-    },
-]
+	{
+		title: 'Home',
+		url: 'home',
+	},
+	{
+		title: 'About',
+		url: 'about',
+	},
+	{
+		title: 'Projects',
+		url: 'projects',
+	},
+	{
+		title: 'Contact',
+		url: 'contact',
+	},
+];
 
 export default NAVIGATION_LINKS;
